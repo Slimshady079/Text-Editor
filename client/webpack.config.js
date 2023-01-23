@@ -17,26 +17,26 @@ module.exports = () => {
     plugins: [
       new HtmlWebpackPlugin({
         template: "./index.html",
-        title: "J.A.T.E",
+        title: "TODOs List",
       }),
       new InjectManifest({
         swSrc: "./src-sw.js",
-        swDest: "./src-sw.js",
+        swDest: "src-sw.js",
       }),
       new WebpackPwaManifest({
+        name: "Just Another Text Editer",
+        short_name: "JATE",
+        description: "An app for editing text",
+        background_color: "#224ca3",
+        theme_color: "#224ca3",
+        start_url: "./",
+        publicPath: "./",
         fingerprints: false,
-        inject: true,
-        name: "just another text editor",
-        short_name: "J.A.T.E",
-        description: "takes notes with JS",
-        background_color: "#225CA3",
-        theme_color: "#225CA3",
-        start_url: "/",
-        publicPath: "/",
+
         icons: [
           {
             src: path.resolve("src/images/logo.png"),
-            sizes: [96, 128, 102, 256, 384, 512],
+            sizes: [96, 128, 192, 256, 384, 512], // multiple sizes
             destination: path.join("assets", "icons"),
           },
         ],
