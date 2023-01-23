@@ -29,8 +29,7 @@ npm start from root and navigate to localhost:3000 in browswer
 If you don't have access to a text editor you can use this one!
 
 ## Deployment:
-
-N/A
+https://jate-text-editor-slimshady.herokuapp.com/
 
 ## Tests:
 
